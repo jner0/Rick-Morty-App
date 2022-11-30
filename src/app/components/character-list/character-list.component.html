@@ -1,0 +1,14 @@
+<section class="container mt-3">
+    <h1>Listado de Personajes</h1>
+    <hr>
+    <div class="d-flex justify-content-between my-5">
+        <button class="btn btn-warning btn-lg" (click)="goToPage(prev)" [disabled]="prev === null">PREV</button>
+        <button class="btn btn-warning btn-lg" (click)="goToPage(next)" [disabled]="next === null">NEXT</button>
+    </div>
+    <div class="row g-3">
+        <article class="col-12 col-md-6 col-lg-3" *ngFor="let character of arrCharacters">
+            <app-character-card [myCharacter]="character"></app-character-card>
+        </article>
+    </div>
+    
+</section>
